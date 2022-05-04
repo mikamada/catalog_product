@@ -1,5 +1,4 @@
 import React from 'react';
-import IconSearch from '../assets/IconSearch';
 
 const Navbar = () => {
 	return (
