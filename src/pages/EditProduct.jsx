@@ -2,7 +2,8 @@ import React from 'react';
 import useGetDataProduct from '../hooks/useGetDataProduct';
 
 import useDeleteProduct from '../hooks/useDeleteProduct';
-import EditItem from '../components/EditItem';
+
+import ListItem from '../components/ListItem';
 const EditProduct = () => {
 	const { deleteAction, loadingDelete } = useDeleteProduct();
 	const { data, loading } = useGetDataProduct();
@@ -23,7 +24,7 @@ const EditProduct = () => {
 					Semua Produk
 				</div>
 				{data.products.map((item) => (
-					<EditItem item={item} onDelete={handleDelete} />
+					<ListItem item={item} onDelete={handleDelete} />
 				))}
 			</div>
 		</>

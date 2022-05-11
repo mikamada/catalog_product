@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Caseer from './pages/Caseer';
 import Dashboard from './pages/Dashboard';
 import EditProduct from './pages/EditProduct';
+import UpdateDataProduct from './pages/UpdateDataProduct';
 
 function App() {
 	return (
@@ -14,7 +15,11 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/caseer" element={<Caseer />} />
 					<Route path="/dashboard" element={<Dashboard />} />
-					<Route path='/dashboard/edit-product' element={<EditProduct/>} />
+					<Route path="/dashboard/edit-product" element={<EditProduct />} />
+					<Route
+						path="/dashboard/edit-product/:id"
+						element={<UpdateDataProduct />}
+					/>
 				</Routes>
 			</Router>
 		</ApolloProvider>
