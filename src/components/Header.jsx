@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-	//
 	return (
 		<>
 			<nav className="w-full bg-slate-800 fixed top-0 z-10">
