@@ -4,6 +4,7 @@ import useGetDataProduct from '../hooks/useGetDataProduct';
 import useDeleteProduct from '../hooks/useDeleteProduct';
 
 import ListItem from '../components/ListItem';
+import Loading from '../components/Loading';
 const EditProduct = () => {
 	const { deleteAction, loadingDelete } = useDeleteProduct();
 	const { data, loading } = useGetDataProduct();
@@ -15,7 +16,11 @@ const EditProduct = () => {
 	};
 
 	if (loading || loadingDelete) {
-		return <span>Loading...</span>;
+		return (
+			<div className="mt-28">
+				<Loading />
+			</div>
+		);
 	}
 	return (
 		<>

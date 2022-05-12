@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import Loading from '../components/Loading';
 import useEditProduct from '../hooks/useEditDataProduct';
 
 const UpdateDataProduct = (props) => {
@@ -29,7 +30,11 @@ const UpdateDataProduct = (props) => {
 	};
 
 	if (loadingEdit) {
-		return <span>Loading...</span>;
+		return (
+			<div className="mt-28">
+				<Loading />
+			</div>
+		);
 	}
 	return (
 		<>
