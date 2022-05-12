@@ -22,11 +22,13 @@ const Header = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="h-10 w-10 rounded-full relative bg-green-600 overflow-hidden flex justify-center items-center cursor-pointer hover:bg-green-700">
-						<div className="w-6 h-6">
-							<img src={searcIcon} alt="" />
+					<Link to={'/search'}>
+						<div className="h-10 w-10 rounded-full relative bg-green-600 overflow-hidden flex justify-center items-center cursor-pointer hover:bg-green-700">
+							<div className="w-6 h-6">
+								<img src={searcIcon} alt="" />
+							</div>
 						</div>
-					</div>
+					</Link>
 				</div>
 			</nav>
 			<div className="h-20"></div>

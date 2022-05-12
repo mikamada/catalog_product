@@ -6,6 +6,7 @@ import Caseer from './pages/Caseer';
 import Dashboard from './pages/Dashboard';
 import EditProduct from './pages/EditProduct';
 import UpdateDataProduct from './pages/UpdateDataProduct';
+import Search from './pages/Search';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 						path="/dashboard/edit-product/:id"
 						element={<UpdateDataProduct />}
 					/>
+					<Route path="/search" element={<Search />} />
 				</Routes>
 			</Router>
 		</ApolloProvider>

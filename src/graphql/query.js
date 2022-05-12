@@ -12,3 +12,16 @@ export const GetDataProduct = gql`
 		}
 	}
 `;
+
+export const GetOnSearch = gql`
+	query MyQuery($name: String!) {
+		products(where: { name: { _eq: $name } }) {
+			id
+			name
+			img
+			is_buy
+			lots_item
+			price
+		}
+	}
+`;
