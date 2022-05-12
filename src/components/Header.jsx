@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import searcIcon from '../assets/searchIcon.png';
 const Header = () => {
 	return (
 		<>
@@ -22,15 +22,10 @@ const Header = () => {
 							</Link>
 						</div>
 					</div>
-					<div className="flex gap-3">
-						<input
-							className="rounded-md pl-1 text-sm"
-							type="text"
-							placeholder="Search products"
-						/>
-						<button className="bg-green-600 px-3 py-1 rounded-md text-white fount-medium">
-							Search
-						</button>
+					<div className="h-10 w-10 rounded-full relative bg-green-600 overflow-hidden flex justify-center items-center cursor-pointer hover:bg-green-700">
+						<div className="w-6 h-6">
+							<img src={searcIcon} alt="" />
+						</div>
 					</div>
 				</div>
 			</nav>
