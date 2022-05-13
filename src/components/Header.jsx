@@ -4,7 +4,7 @@ import searcIcon from '../assets/searchIcon.png';
 const Header = () => {
 	return (
 		<>
-			<nav className="w-full bg-slate-800 fixed top-0 z-10">
+			<nav className="w-full mobile:px-3 bg-slate-800 fixed top-0 z-10">
 				<div className="container h-20 m-auto flex items-center justify-between">
 					<div className="flex items-center">
 						<div className="logo text-slate-100 font-bold text-xl mr-5">
@@ -13,9 +13,6 @@ const Header = () => {
 						<div className="flex gap-4 nav-link">
 							<Link to={'/'} className="text-slate-300">
 								Home
-							</Link>
-							<Link to={'/caseer'} className="text-slate-300">
-								Caseer
 							</Link>
 							<Link to={'/dashboard'} className="text-slate-300 ">
 								Dashboard

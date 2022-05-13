@@ -39,7 +39,7 @@ const UpdateDataProduct = (props) => {
 	return (
 		<>
 			<div className="text-center">
-				<div className="mt-12 mb-4 text-slate-800 font-semibold text-lg">
+				<div className="mb-4 mobile:pt-44 text-slate-800 font-semibold text-lg pt-36">
 					Edit Data Barang
 				</div>
 				<div className="w-64 m-auto ">
@@ -49,7 +49,7 @@ const UpdateDataProduct = (props) => {
 							value={editData.name}
 							onChange={onchange}
 							type="text"
-							className="rounded-lg"
+							className="rounded-lg w-full"
 						/>
 					</div>
 					<div className="mb-4">
@@ -58,10 +58,10 @@ const UpdateDataProduct = (props) => {
 							value={editData.price}
 							onChange={onchange}
 							type="number"
-							className="rounded-lg"
+							className="rounded-lg w-full"
 						/>
 					</div>
-					<div className="flex justify-between w-full  px-4">
+					<div className="flex justify-between w-full mt-10">
 						<button className="px-5 py-2 bg-red-800 text-white font-medium text-lg rounded-md">
 							Batal
 						</button>

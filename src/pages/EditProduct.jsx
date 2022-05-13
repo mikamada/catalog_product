@@ -24,7 +24,7 @@ const EditProduct = () => {
 	}
 	return (
 		<>
-			<div className="container m-auto mt-10">
+			<div className="container mobile:px-3 m-auto mt-10">
 				<div className="text-slate-800 font-semibold text-lg mb-6">
 					Semua Produk
 				</div>

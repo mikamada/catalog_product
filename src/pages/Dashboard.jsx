@@ -6,13 +6,13 @@ const Dashboard = () => {
 	return (
 		<>
 			<Header />
-			<div className="container m-auto">
-				<div className="text-slate-800 font-semibold text-lg mb-6">
+			<div className="container m-auto mobile:px-3">
+				<div className="text-slate-800 font-semibold text-lg mb-6 mt-12">
 					Dashboard
 				</div>
-				<div className="grid grid-cols-3 ">
+				<div className="flex flex-wrap justify-between">
 					<Link to={'/dashboard/edit-product'}>
-						<div className="w-60 h-40 bg-slate-500 flex items-center justify-center cursor-pointer menu-box rounded-md">
+						<div className="w-64 h-40 bg-slate-500 flex items-center justify-center cursor-pointer menu-box rounded-md mb-5">
 							<div className="text-white font-semibold text-xl  ">
 								Edit Product
 							</div>
