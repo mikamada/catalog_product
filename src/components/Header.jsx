@@ -4,7 +4,7 @@ import searcIcon from '../assets/searchIcon.png';
 const Header = () => {
 	return (
 		<>
-			<nav className="w-full mobile:px-3 bg-slate-800 fixed top-0 z-10">
+			<nav className="w-full mobile:px-3 mobile:-top-1 tablet:top-0 bg-slate-800 fixed z-10">
 				<div className="container h-20 m-auto flex items-center justify-between">
 					<div className="flex items-center">
 						<div className="logo text-slate-100 font-bold text-xl mr-5">

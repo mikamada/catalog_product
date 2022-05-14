@@ -5,7 +5,7 @@ const Loading = (props) => (
 		xmlns="http://www.w3.org/2000/svg"
 		style={{
 			margin: 'auto',
-			background: '#fff',
+			background: '#f6f8fd',
 			display: 'block',
 			shapeRendering: 'auto',
 		}}

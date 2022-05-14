@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../components/Loading';
 import useEditProduct from '../hooks/useEditDataProduct';
 
 const UpdateDataProduct = (props) => {
+	const navigate = useNavigate();
 	const location = useLocation();
 	const { editAction, loadingEdit } = useEditProduct();
 
@@ -62,7 +63,12 @@ const UpdateDataProduct = (props) => {
 						/>
 					</div>
 					<div className="flex justify-between w-full mt-10">
-						<button className="px-5 py-2 bg-red-800 text-white font-medium text-lg rounded-md">
+						<button
+							className="px-5 py-2 bg-red-800 text-white font-medium text-lg rounded-md"
+							onClick={() => {
+								navigate(-1);
+							}}
+						>
 							Batal
 						</button>
 						<button

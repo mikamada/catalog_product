@@ -6,6 +6,7 @@
 
 body {
 	font-family: 'Poppins', sans-serif;
+	background-color: #f6f8fd;
 }
 
 .nav-link > a:hover {
@@ -14,4 +15,21 @@ body {
 
 .menu-box:hover {
 	background-color: teal;
+}
+
+.card {
+	position: relative;
+	box-shadow: 5px 8px 5px rgba(128, 128, 128, 10%);
+}
+
+.card > div > img {
+	position: absolute;
+	z-index: -1;
+	inset: 0;
+	object-fit: cover;
+	transition: 200ms;
+}
+
+.card:hover div > img {
+	transform: scale(1.05);
 }

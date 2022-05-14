@@ -18,7 +18,7 @@ const Search = () => {
 
 	if (loadingSearch) {
 		return (
-			<div>
+			<div className="mt-28">
 				<Loading />
 			</div>
 		);
@@ -52,19 +52,21 @@ const Search = () => {
 				{!dataSearch ? (
 					''
 				) : (
-					<div className="mt-5 flex flex-wrap">
+					<div className="mt-10 flex flex-wrap">
 						{dataSearch.products.map((item) => (
 							<>
 								<div
-									className="w-44 h-52 border-2 rounded-md relative overflow-hidden mb-3"
+									className="w-44 h-56 rounded-md overflow-hidden mb-5"
 									key={item.id}
 								>
-									<img src={item.img} alt={item.name} />
+									<div className="w-full h-40 overflow-hidden">
+										<img src={item.img} alt={item.name} />
+									</div>
 									<div className="absolute top-0 right-0"></div>
-									<div className="w-full h-20 bg-black opacity-80 absolute bottom-0 p-1">
-										<div>
-											<p className="text-slate-100 font-medium">{item.name}</p>
-											<p className="text-slate-100">IDR {item.price}</p>
+									<div className="w-full h-20 bg-white bottom-0 p-2">
+										<div className="text-slate-800 px-2">
+											<p className="font-medium text-ellipsis">{item.name}</p>
+											<p className="font-light">IDR {item.price}</p>
 										</div>
 									</div>
 								</div>
