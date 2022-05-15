@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard';
 import EditProduct from './pages/EditProduct';
 import UpdateDataProduct from './pages/UpdateDataProduct';
 import Search from './pages/Search';
+import InsertNewProduct from './pages/InsertNewProduct';
 
 function App() {
 	return (
@@ -20,6 +21,7 @@ function App() {
 						element={<UpdateDataProduct />}
 					/>
 					<Route path="/search" element={<Search />} />
+					<Route path="dashboard/insert-product" element={<InsertNewProduct />} />
 				</Routes>
 			</Router>
 		</ApolloProvider>
