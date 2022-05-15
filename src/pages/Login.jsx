@@ -39,32 +39,37 @@ const Login = () => {
 		return <div>Loading...</div>;
 	}
 	return (
-		<div>
-			<h1>Login</h1>
-			<div>
-				<input
-					className="outline-2"
-					type="text"
-					name="name"
-					placeholder="username"
-					onChange={handleChangeName}
-					autocomplete="off"
-				/>
-				<input
-					className="outline-2"
-					type="password"
-					name="password"
-					placeholder="password"
-					onChange={handleChangePassword}
-				/>
-				{data && (
-					<h3 className="text-red-700 font-light italic">
-						username dan password salah
-					</h3>
-				)}
-				<button className="border-2" onClick={onLogin}>
-					Submit
-				</button>
+		<div className="min-h-screen antialiased py-6 flex flex-col justify-center mobile:py-12">
+			<div className="relative py-3 mobile:max-w-xl mobile:m-auto">
+				<span className="text-2xl font-light">Login to your account</span>
+				<div className="mt-4 bg-white shadow-md rounded-lg">
+					<div className="h-2 bg-indigo-400 rounded-lg"></div>
+					<div className="px-8 py-6">
+						<label className="block font-semibold">Username</label>
+						<input
+							type="text"
+							placeholder="username"
+							className="border -w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+							onChange={handleChangeName}
+						/>
+						<label className="block font-semibold mt-4">Password</label>
+						<input
+							type="password"
+							placeholder="password"
+							className="border -w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+							onChange={handleChangePassword}
+						/>
+						<div className="flex justify-end items-baseline">
+							<button
+								onClick={onLogin}
+								type="submit"
+								className="mt-4 bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600"
+							>
+								Login
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
