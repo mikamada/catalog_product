@@ -64,7 +64,7 @@ const UpdateDataProduct = (props) => {
 					</div>
 					<div className="flex justify-between w-full mt-10">
 						<button
-							className="px-5 py-2 bg-red-800 text-white font-medium text-lg rounded-md"
+							className="px-5 py-2 bg-red-800 hover:bg-red-600 transition-all text-white font-medium text-lg rounded-md"
 							onClick={() => {
 								navigate(-1);
 							}}
@@ -72,7 +72,7 @@ const UpdateDataProduct = (props) => {
 							Batal
 						</button>
 						<button
-							className="px-5 py-2 bg-blue-800 text-white font-medium text-lg rounded-md right-0"
+							className="px-5 py-2 bg-blue-800 hover:bg-blue-700 transition-all text-white font-medium text-lg rounded-md right-0"
 							onClick={handleSubmit}
 						>
 							Simpan
