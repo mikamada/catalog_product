@@ -19,7 +19,7 @@ body {
 
 .card {
 	position: relative;
-	box-shadow: 5px 8px 5px rgba(128, 128, 128, 10%);
+	box-shadow: 5px 8px 5px rgba(0, 0, 0, 20%);
 }
 
 .card > div > img {
