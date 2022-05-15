@@ -15,7 +15,7 @@ export const GetDataProduct = gql`
 
 export const GetOnSearch = gql`
 	query MyQuery($name: String!) {
-		products(where: { name: { _eq: $name } }) {
+		products(where: { name: { _iregex: $name } }) {
 			id
 			name
 			img
