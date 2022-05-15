@@ -7,13 +7,18 @@ import EditProduct from './pages/EditProduct';
 import UpdateDataProduct from './pages/UpdateDataProduct';
 import Search from './pages/Search';
 import InsertNewProduct from './pages/InsertNewProduct';
+import PrivatRoute from './private-route/privateRoute';
+import Login from './pages/Login';
 
 function App() {
 	return (
 		<ApolloProvider client={client}>
 			<Router>
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="/" element={<Login />} />
+					<Route element={<PrivatRoute />}>
+						<Route path="/home" element={<Home />} />
+					</Route>
 					<Route path="/dashboard" element={<Dashboard />} />
 					<Route path="/dashboard/edit-product" element={<EditProduct />} />
 					<Route
@@ -21,7 +26,10 @@ function App() {
 						element={<UpdateDataProduct />}
 					/>
 					<Route path="/search" element={<Search />} />
-					<Route path="dashboard/insert-product" element={<InsertNewProduct />} />
+					<Route
+						path="dashboard/insert-product"
+						element={<InsertNewProduct />}
+					/>
 				</Routes>
 			</Router>
 		</ApolloProvider>

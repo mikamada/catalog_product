@@ -25,3 +25,13 @@ export const GetOnSearch = gql`
 		}
 	}
 `;
+
+export const UserLogin = gql`
+	query MyQuery($name: String, $password: String) {
+		auth(where: { name: { _eq: $name }, password: { _eq: $password } }) {
+			id
+			name
+			password
+		}
+	}
+`;
