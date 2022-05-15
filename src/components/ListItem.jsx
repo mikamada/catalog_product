@@ -10,7 +10,7 @@ const ListItem = ({ ...props }) => {
 	});
 
 	return (
-		<div className="w-full h-20 border-2 rounded-md mb-3 flex items-center justify-between overflow-hidden pr-4">
+		<div className="w-full h-20 rounded-md mb-3 flex items-center justify-between overflow-hidden pr-4 bg-white">
 			<div className="flex items-center ">
 				<div className="w-20 h-full overflow-hidden rounded-md">
 					<img src={img} alt={name} />
@@ -20,7 +20,7 @@ const ListItem = ({ ...props }) => {
 					<p>IDR {price}</p>
 				</div>
 			</div>
-			<div className="flex items-center gap-4">
+			<div className="flex items-center gap-5">
 				<div className="h-7 w-7 cursor-pointer" onClick={handleEditClick}>
 					<img src={editIcon} alt="icon-edit" />
 				</div>
