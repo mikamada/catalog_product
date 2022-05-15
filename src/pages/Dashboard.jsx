@@ -14,7 +14,7 @@ const Dashboard = () => {
 					<Link to={'/dashboard/edit-product'}>
 						<div className="w-64 h-40 bg-slate-500 flex items-center justify-center cursor-pointer menu-box rounded-md mb-5">
 							<div className="text-white font-semibold text-xl  ">
-								Edit Product
+								Edit Produk
 							</div>
 						</div>
 					</Link>
