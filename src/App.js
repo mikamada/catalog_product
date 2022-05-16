@@ -9,6 +9,7 @@ import Search from './pages/Search';
 import InsertNewProduct from './pages/InsertNewProduct';
 import PrivatRoute from './private-route/privateRoute';
 import Login from './pages/Login';
+import PageError from './pages/PageError';
 
 function App() {
 	return (
@@ -17,7 +18,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Login />} />
 					<Route element={<PrivatRoute />}>
-						<Route path="/home" element={<Home />} />
+						<Route path="/catalog" element={<Home />} />
 					</Route>
 					<Route path="/dashboard" element={<Dashboard />} />
 					<Route path="/dashboard/edit-product" element={<EditProduct />} />
@@ -30,6 +31,7 @@ function App() {
 						path="dashboard/insert-product"
 						element={<InsertNewProduct />}
 					/>
+					<Route path="*" element={<PageError />} />
 				</Routes>
 			</Router>
 		</ApolloProvider>

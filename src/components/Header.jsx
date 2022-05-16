@@ -11,7 +11,7 @@ const Header = () => {
 							Warungku
 						</div>
 						<div className="flex gap-4 nav-link">
-							<Link to={'/home'} className="text-slate-300">
+							<Link to={'/catalog'} className="text-slate-300">
 								Catalog
 							</Link>
 							<Link to={'/dashboard'} className="text-slate-300 ">

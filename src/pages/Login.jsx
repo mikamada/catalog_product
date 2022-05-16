@@ -15,7 +15,7 @@ const Login = () => {
 		if (data?.auth.length === 1) {
 			console.log('data', data);
 			cookies.set('auth', true, { path: '/' });
-			return navigate('/home');
+			return navigate('/catalog');
 		}
 	});
 
@@ -38,7 +38,7 @@ const Login = () => {
 
 	if (loading) {
 		return (
-			<div className="mt-52">
+			<div className="absolute w-full h-full flex justify-center items-center">
 				<Loading />
 			</div>
 		);

@@ -32,7 +32,7 @@ const UpdateDataProduct = (props) => {
 
 	if (loadingEdit) {
 		return (
-			<div className="mt-52">
+			<div className="absolute w-full h-full flex justify-center items-center">
 				<Loading />
 			</div>
 		);
