@@ -13,10 +13,10 @@ const Dashboard = () => {
 	const [imageList, setImageList] = useState([]);
 	const { insertProduct, loadingInsertProduct } = useInserProduct();
 
-	const imageListRef = ref(storage, 'images/');
+	const imageListRef = ref(storage, 'products/');
 	const uploadImage = async () => {
 		if (imageUpload == null) return;
-		const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
+		const imageRef = ref(storage, `products/${imageUpload.name + v4()}`);
 		const snapshot = await uploadBytes(imageRef, imageUpload);
 		const downloadUrl = await getDownloadURL(snapshot.ref);
 		console.log(downloadUrl);
@@ -29,6 +29,10 @@ const Dashboard = () => {
 			},
 		});
 	};
+
+	useEffect(() => {
+		console.log('image', imageList);
+	}, [imageList]);
 
 	useEffect(() => {
 		listAll(imageListRef).then((respone) => {
