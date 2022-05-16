@@ -59,6 +59,11 @@ const Login = () => {
 							className="border -w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
 							onChange={handleChangePassword}
 						/>
+						{data && (
+							<h3 className="font-light text-red-700 italic">
+								username dan password salah
+							</h3>
+						)}
 						<div className="flex justify-end items-baseline">
 							<button
 								onClick={onLogin}
