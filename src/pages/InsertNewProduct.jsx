@@ -49,7 +49,7 @@ const Dashboard = () => {
 	}
 	return (
 		<div className="min-h-screen  antialiased py-6 flex flex-col justify-center ">
-			<div className="relative py-3 mobile:max-w-xl mobile:m-auto">
+			<div className="relative py-3 mobile:w-[95%] laptop:w-1/2 mobile:m-auto">
 				<span className="text-2xl font-light">Tambah barang </span>
 				<div className="mt-4 bg-white shadow-md rounded-lg">
 					<div className="px-8 py-6 w-full">
