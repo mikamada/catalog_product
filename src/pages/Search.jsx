@@ -18,7 +18,7 @@ const Search = () => {
 
 	if (loadingSearch) {
 		return (
-			<div className="mt-28">
+			<div className="mt-52">
 				<Loading />
 			</div>
 		);
@@ -44,7 +44,7 @@ const Search = () => {
 								},
 							});
 						}}
-						className="bg-blue-700 text-white font-medium text-lg px-8 rounded-3xl"
+						className="bg-blue-700 text-white font-medium text-lg px-8 rounded-3xl btn"
 					>
 						Search
 					</button>
@@ -52,11 +52,11 @@ const Search = () => {
 				{!dataSearch ? (
 					''
 				) : (
-					<div className="mt-10 flex flex-wrap">
+					<div className="mt-10 grid mobile:grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-6">
 						{dataSearch.products.map((item) => (
 							<>
 								<div
-									className="w-44 h-56 rounded-md overflow-hidden mb-5"
+									className="w-44 h-56 rounded-md overflow-hidden mb-5 card"
 									key={item.id}
 								>
 									<div className="w-full h-40 overflow-hidden">

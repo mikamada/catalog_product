@@ -9,7 +9,7 @@ const Home = () => {
 
 	if (loading) {
 		return (
-			<div className="mt-28">
+			<div className="mt-52">
 				<Loading />
 			</div>
 		);
