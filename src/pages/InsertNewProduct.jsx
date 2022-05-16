@@ -41,40 +41,13 @@ const Dashboard = () => {
 	});
 
 	if (loadingInsertProduct) {
-		return <Loading />;
+		return (
+			<div className="mt-52">
+				<Loading />
+			</div>
+		);
 	}
 	return (
-		// <div className="min-h-screen antialiased py-6 flex flex-col justify-center mobile:py-12">
-		// 	<div className="relative">
-		// 		<input
-		// 			required
-		// 			type="text"
-		// 			onChange={(e) => setName(e.target.value)}
-		// 			placeholder="name"
-		// 			className="border-b py-1 focus:outline-none focus:border-indigo-600 focus:border-2"
-		// 		/>
-		// 		<label className="absolute left-0 top-1">Nama barang</label>
-		// 	</div>
-
-		// 	<input
-		// 		required
-		// 		type="number"
-		// 		onChange={(e) => setPrice(e.target.value)}
-		// 		placeholder="price"
-		// 	/>
-		// 	<div className="relative">
-		// 		<input
-		// 			required
-		// 			type="file"
-		// 			onChange={(event) => {
-		// 				setImageUpload(event.target.files[0]);
-		// 			}}
-		//
-		// 		/>
-		// 	</div>
-
-		// 	<button onClick={uploadImage}>Tambah Barang</button>
-		// </div>
 		<div className="min-h-screen  antialiased py-6 flex flex-col justify-center ">
 			<div className="relative py-3 mobile:max-w-xl mobile:m-auto">
 				<span className="text-2xl font-light">Tambah barang </span>
@@ -82,7 +55,6 @@ const Dashboard = () => {
 					<div className="px-8 py-6 w-full">
 						<input
 							className="mt-4"
-							required
 							type="file"
 							onChange={(event) => {
 								setImageUpload(event.target.files[0]);
@@ -90,6 +62,7 @@ const Dashboard = () => {
 						/>
 						<label className="block font-semibold mt-4">Nama barang</label>
 						<input
+							required
 							type="text"
 							placeholder="nama barang"
 							className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
@@ -97,6 +70,7 @@ const Dashboard = () => {
 						/>
 						<label className="block font-semibold mt-4">Harga</label>
 						<input
+							required
 							type="number"
 							placeholder="harga"
 							className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
@@ -107,7 +81,7 @@ const Dashboard = () => {
 							<button
 								onClick={uploadImage}
 								type="submit"
-								className="mt-4 bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600"
+								className="mt-4 bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 btn"
 							>
 								Tambah
 							</button>

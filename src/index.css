@@ -33,3 +33,7 @@ body {
 .card:hover div > img {
 	transform: scale(1.05);
 }
+
+.btn:active {
+	box-shadow: 5px 8px 5px rgba(0, 0, 0, 20%);
+}

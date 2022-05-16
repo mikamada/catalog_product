@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import Loading from '../components/Loading';
 import useUserLogin from '../hooks/useUserLogin';
 
 const cookies = new Cookies();
@@ -36,7 +37,11 @@ const Login = () => {
 	};
 
 	if (loading) {
-		return <div>Loading...</div>;
+		return (
+			<div className="mt-52">
+				<Loading />
+			</div>
+		);
 	}
 	return (
 		<div className="min-h-screen antialiased py-6 flex flex-col justify-center mobile:py-12">
@@ -68,7 +73,7 @@ const Login = () => {
 							<button
 								onClick={onLogin}
 								type="submit"
-								className="mt-4 bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600"
+								className="mt-4 bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 btn"
 							>
 								Login
 							</button>
