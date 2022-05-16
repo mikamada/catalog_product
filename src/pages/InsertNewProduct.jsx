@@ -44,26 +44,75 @@ const Dashboard = () => {
 		return <Loading />;
 	}
 	return (
-		<div className="container">
-			<div>
-				<div>
-					<input
-						type="file"
-						onChange={(event) => {
-							setImageUpload(event.target.files[0]);
-						}}
-					/>
-					<input
-						type="text"
-						onChange={(e) => setName(e.target.value)}
-						placeholder="name"
-					/>
-					<input
-						type="number"
-						onChange={(e) => setPrice(e.target.value)}
-						placeholder="price"
-					/>
-					<button onClick={uploadImage}>Tambah Barang</button>
+		// <div className="min-h-screen antialiased py-6 flex flex-col justify-center mobile:py-12">
+		// 	<div className="relative">
+		// 		<input
+		// 			required
+		// 			type="text"
+		// 			onChange={(e) => setName(e.target.value)}
+		// 			placeholder="name"
+		// 			className="border-b py-1 focus:outline-none focus:border-indigo-600 focus:border-2"
+		// 		/>
+		// 		<label className="absolute left-0 top-1">Nama barang</label>
+		// 	</div>
+
+		// 	<input
+		// 		required
+		// 		type="number"
+		// 		onChange={(e) => setPrice(e.target.value)}
+		// 		placeholder="price"
+		// 	/>
+		// 	<div className="relative">
+		// 		<input
+		// 			required
+		// 			type="file"
+		// 			onChange={(event) => {
+		// 				setImageUpload(event.target.files[0]);
+		// 			}}
+		//
+		// 		/>
+		// 	</div>
+
+		// 	<button onClick={uploadImage}>Tambah Barang</button>
+		// </div>
+		<div className="min-h-screen  antialiased py-6 flex flex-col justify-center ">
+			<div className="relative py-3 mobile:max-w-xl mobile:m-auto">
+				<span className="text-2xl font-light">Tambah barang </span>
+				<div className="mt-4 bg-white shadow-md rounded-lg">
+					<div className="px-8 py-6 w-full">
+						<input
+							className="mt-4"
+							required
+							type="file"
+							onChange={(event) => {
+								setImageUpload(event.target.files[0]);
+							}}
+						/>
+						<label className="block font-semibold mt-4">Nama barang</label>
+						<input
+							type="text"
+							placeholder="nama barang"
+							className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+							onChange={(e) => setName(e.target.value)}
+						/>
+						<label className="block font-semibold mt-4">Harga</label>
+						<input
+							type="number"
+							placeholder="harga"
+							className="border w-full h-5 px-3 py-5 mt-2 hover:outline-none focus:outline-none focus:ring-1 focus:ring-indigo-600 rounded-md"
+							onChange={(e) => setPrice(e.target.value)}
+						/>
+
+						<div className="flex justify-end items-baseline">
+							<button
+								onClick={uploadImage}
+								type="submit"
+								className="mt-4 bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600"
+							>
+								Tambah
+							</button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
