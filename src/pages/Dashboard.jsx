@@ -7,9 +7,10 @@ const Dashboard = () => {
 		<>
 			<Header />
 			<div className="container m-auto mobile:px-3">
-				<div className="text-slate-800 font-semibold text-lg mb-6 mt-12">
+				<div className="text-slate-800 font-semibold text-lg mb-6 mt-12 ">
 					Dashboard
 				</div>
+
 				<div className="flex flex-wrap gap-5 mobile:justify-center tablet:justify-start">
 					<Link to={'/dashboard/edit-product'}>
 						<div className="w-64 h-40 bg-slate-500 flex items-center justify-center cursor-pointer menu-box rounded-md mb-5">
