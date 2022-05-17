@@ -11,7 +11,7 @@ const ListItem = ({ ...props }) => {
 
 	return (
 		<div className="w-full h-20 rounded-md mb-3 flex items-center justify-between overflow-hidden pr-4 bg-white">
-			<div className="flex items-center ">
+			<div className="flex items-center gap-2">
 				<div className="w-20 h-full overflow-hidden rounded-md">
 					<img src={img} alt={name} />
 				</div>
