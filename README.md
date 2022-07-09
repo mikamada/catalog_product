@@ -1,6 +1,6 @@
 # Warungku
 
-### Demo: https://62824c3310b2d426f6d2ec8f--delicate-meringue-41d1e0.netlify.app
+### Demo: https://warunku.netlify.app/
 ### username: admin
 ### password: admin123
 
